@@ -1,19 +1,19 @@
-# Python
+# datasets
+data/
+*.zip
+*.csv
+
+# training outputs
+history/
+checkpoints/
+*.h5
+*.pt
+*.pth
+
+# python
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 
-# Virtual environment
-.venv/
-env/
-venv/
+# system
+.DS_Store
 
-# Data & models
-*.zip
-data/
-model/*.h5
-model/*.pkl
-
-# VSCode
-.vscode/
