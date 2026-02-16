@@ -1,12 +1,21 @@
-# trained models
-olds_mods/
-*.h5
-*.keras
-
 # dataset
 *.zip
+data/
+data_images/
 
-# cache/env
-cache/
+# model weights
+*.h5
+*.keras
+*.pt
+*.pth
+olds_mods/
+
+# environments
 .venv/
+
+# cache
+cache/
 __pycache__/
+
+# misc
+.ipynb_checkpoints/
