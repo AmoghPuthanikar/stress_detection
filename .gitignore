@@ -1,19 +1,12 @@
-# datasets
-data/
-*.zip
-*.csv
-
-# training outputs
-history/
-checkpoints/
+# trained models
+olds_mods/
 *.h5
-*.pt
-*.pth
+*.keras
 
-# python
+# dataset
+*.zip
+
+# cache/env
+cache/
+.venv/
 __pycache__/
-*.pyc
-
-# system
-.DS_Store
-
