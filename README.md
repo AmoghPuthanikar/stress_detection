@@ -341,9 +341,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions, suggestions, or collaboration opportunities:
 
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your Name](https://linkedin.com/in/yourprofile)
+- **GitHub**: [@AmoghPuthanikar](https://github.com/AmoghPuthanikar)
+- **Email**: apputhanikar04@gmail.com
+- **LinkedIn**: [Amogh Puthanikar](https://www.linkedin.com/in/amoghputhanikar/)
 
 ## ⭐ Star History
 
