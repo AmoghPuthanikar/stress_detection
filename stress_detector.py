@@ -8,7 +8,6 @@ class StressDetector:
     def __init__(self, model_path='stress_detection_model.h5'):
         """Initialize the stress detector with trained model"""
         
-        # Check if model exists
         if not os.path.exists(model_path):
             print(f"❌ Error: Model file not found at '{model_path}'")
             print("Please ensure 'stress_detection_model.h5' is in the same folder")
@@ -22,7 +21,7 @@ class StressDetector:
             print(f"❌ Error loading model: {e}")
             sys.exit(1)
         
-        # Load face detector
+        # Loading face detector
         self.face_cascade = cv2.CascadeClassifier(
             cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
         )
@@ -56,7 +55,6 @@ class StressDetector:
     
     def draw_results(self, frame, x, y, w, h, prob, is_stressed):
         """Draw detection results on frame"""
-        # Color: Red=Stress, Green=Calm
         color = (0, 0, 255) if is_stressed else (0, 255, 0)
         
         # Label
@@ -111,9 +109,8 @@ class StressDetector:
                 gray, scaleFactor=1.1, minNeighbors=5, minSize=(48, 48)
             )
             
-            # Process each face
+            # Processing each face
             for (x, y, w, h) in faces:
-                # Extract and preprocess face
                 face_roi = gray[y:y+h, x:x+w]
                 face = self.preprocess_face(face_roi)
                 
@@ -123,11 +120,11 @@ class StressDetector:
                 # Draw results
                 self.draw_results(frame, x, y, w, h, prob, is_stressed)
             
-            # Show face count
+            # face count
             cv2.putText(frame, f"Faces detected: {len(faces)}", (10, 30), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
             
-            # Show FPS info
+            # FPS info
             cv2.putText(frame, "Press 'q' to quit", (10, frame.shape[0] - 10), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (200, 200, 200), 1)
             
