@@ -149,14 +149,14 @@ def main():
     print("Model: CNN trained on FER2013 (79% accuracy)")
     print("=" * 60)
     
-    # Check for model file
+
     model_path = 'stress_detection_model.h5'
     
-    # Allow custom path via command line
+    
     if len(sys.argv) > 1:
         model_path = sys.argv[1]
     
-    # Initialize and run
+    
     detector = StressDetector(model_path)
     detector.run()
     
